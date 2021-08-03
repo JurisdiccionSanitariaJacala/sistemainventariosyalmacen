@@ -161,7 +161,7 @@ public class JFMain extends javax.swing.JFrame {
 
         jMenu5.setText("Entradas");
 
-        jMenuItem8.setText("Registrar salida");
+        jMenuItem8.setText("Registrar entrada");
         jMenu5.add(jMenuItem8);
 
         jMenuItem13.setText("Historial");
