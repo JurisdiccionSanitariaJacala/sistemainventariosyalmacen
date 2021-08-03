@@ -147,7 +147,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Registrar salida"/>
+                <Property name="text" type="java.lang.String" value="Registrar entrada"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
