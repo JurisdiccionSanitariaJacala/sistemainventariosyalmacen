@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.GUI;
+import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
 import mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.classes.JFrmCreator;
 
 /**
@@ -131,6 +133,11 @@ public class JFMain extends javax.swing.JFrame {
         jMenu6.setText("Insumos");
 
         jMenuItem2.setText("Alta");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem2);
 
         jMenuItem3.setText("Consulta");
@@ -153,6 +160,11 @@ public class JFMain extends javax.swing.JFrame {
         jMenu3.setText("Despachos");
 
         jMenuItem9.setText("Registrar despacho");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem9);
 
         jMenuItem14.setText("Historial");
@@ -210,16 +222,23 @@ public class JFMain extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        createFrame();
+        this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
-        JFrmAcercaDe frmAcercaDe = JFrmCreator.getFrmAcercaDe();
-        JDPMain.add(frmAcercaDe);
-        frmAcercaDe.setVisible(true);
-        
+        createInternalFrame(JFrmCreator.getFrmAcercaDe());
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        createInternalFrame(JFrmCreator.getFrmSalidaAlmacen());
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        createInternalFrame(JFrmCreator.getFrmAltaClave());
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,7 +275,17 @@ public class JFMain extends javax.swing.JFrame {
         });
     }
     
-    public void createFrame(){
+    public void createInternalFrame(JInternalFrame jif){
+        try{
+            if(!JDPMain.isAncestorOf(jif)){
+                JDPMain.add(jif);                
+            } else {                
+                jif.setSelected(true);
+                jif.setVisible(true);
+            }            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Error: "+e.getMessage());
+        }        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

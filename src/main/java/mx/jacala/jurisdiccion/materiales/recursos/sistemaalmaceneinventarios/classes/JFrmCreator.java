@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.classes;
+import javax.swing.JDesktopPane;
 import mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.GUI.*;
 
 /**
@@ -16,12 +17,36 @@ public class JFrmCreator {
     private static JFrmAltaDestino _frmAltaDestino;
     private static JFrmSalidaAlmacen _frmSalidaAlmacen;
     private static JFrmDespachoAlmacen _frmDespachoAlmacen;
+    private static JFrmContacto _frmContacto;
     
-    
+    /*
+    Metodos para los JFrame
+    */
     public static JFrmAcercaDe getFrmAcercaDe(){
         if (_frmAcercaDe == null){
             _frmAcercaDe = new JFrmAcercaDe();
         }
         return _frmAcercaDe;
+    }
+    
+    public static JFrmContacto getFrmContacto(){
+        if(_frmContacto == null){
+            _frmContacto = new JFrmContacto();
+        }
+        return _frmContacto;
+    }
+    
+    public static JFrmSalidaAlmacen getFrmSalidaAlmacen(){
+        if(_frmSalidaAlmacen == null){
+            _frmSalidaAlmacen = new JFrmSalidaAlmacen();
+        }
+        return _frmSalidaAlmacen;
+    }
+    
+    public static JFrmAltaClave getFrmAltaClave(){
+        if(_frmAltaClave == null) {
+            _frmAltaClave = new JFrmAltaClave();
+        }
+        return _frmAltaClave;
     }
 }
