@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.GUI;
+import mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.classes.JFrmCreator;
 
 /**
  *
@@ -179,6 +180,11 @@ public class JFMain extends javax.swing.JFrame {
         jMenu4.setText("Ayuda");
 
         jMenuItem4.setText("Acerca de");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem4);
 
         jMenuItem5.setText("Ver manual");
@@ -206,6 +212,14 @@ public class JFMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         createFrame();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        JFrmAcercaDe frmAcercaDe = JFrmCreator.getFrmAcercaDe();
+        JDPMain.add(frmAcercaDe);
+        frmAcercaDe.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
