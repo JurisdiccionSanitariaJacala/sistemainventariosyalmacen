@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.GUI;
+import com.sun.glass.events.KeyEvent;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 import mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.classes.JFrmCreator;
@@ -39,6 +40,9 @@ public class JFMain extends javax.swing.JFrame {
         jMenu13 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
@@ -47,6 +51,9 @@ public class JFMain extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenuItem16 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
@@ -118,6 +125,16 @@ public class JFMain extends javax.swing.JFrame {
 
         jMenu1.add(jMenu13);
 
+        jMenu9.setText("Usuarios");
+
+        jMenuItem17.setText("Agregar");
+        jMenu9.add(jMenuItem17);
+
+        jMenuItem18.setText("Catalogo");
+        jMenu9.add(jMenuItem18);
+
+        jMenu1.add(jMenu9);
+
         jMenuItem1.setText("Salir");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,6 +171,16 @@ public class JFMain extends javax.swing.JFrame {
         jMenu7.add(jMenuItem7);
 
         jMenu2.add(jMenu7);
+
+        jMenu8.setText("Procedencia");
+
+        jMenuItem15.setText("Alta");
+        jMenu8.add(jMenuItem15);
+
+        jMenuItem16.setText("Consulta");
+        jMenu8.add(jMenuItem16);
+
+        jMenu2.add(jMenu8);
 
         jMenuBar1.add(jMenu2);
 
@@ -195,6 +222,11 @@ public class JFMain extends javax.swing.JFrame {
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenuItem4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jMenuItem4KeyPressed(evt);
             }
         });
         jMenu4.add(jMenuItem4);
@@ -239,6 +271,13 @@ public class JFMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         createInternalFrame(JFrmCreator.getFrmAltaClave());
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenuItem4KeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            createInternalFrame(JFrmCreator.getFrmAltaClave());
+        }
+    }//GEN-LAST:event_jMenuItem4KeyPressed
 
     /**
      * @param args the command line arguments
@@ -302,6 +341,8 @@ public class JFMain extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -309,6 +350,10 @@ public class JFMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

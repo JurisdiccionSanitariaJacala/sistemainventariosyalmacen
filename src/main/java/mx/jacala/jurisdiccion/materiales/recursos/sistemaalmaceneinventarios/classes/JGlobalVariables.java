@@ -6,7 +6,7 @@
 package mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.classes;
 
 /**
- *
+ * Clase para definir variables y utilizarlas en el resto de las clases
  * @author usuario
  */
 public class JGlobalVariables {
