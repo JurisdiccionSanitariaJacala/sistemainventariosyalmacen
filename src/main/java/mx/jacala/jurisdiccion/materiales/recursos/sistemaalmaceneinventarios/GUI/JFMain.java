@@ -40,9 +40,6 @@ public class JFMain extends javax.swing.JFrame {
         jMenu13 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
-        jMenu9 = new javax.swing.JMenu();
-        jMenuItem17 = new javax.swing.JMenuItem();
-        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
@@ -54,6 +51,9 @@ public class JFMain extends javax.swing.JFrame {
         jMenu8 = new javax.swing.JMenu();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
@@ -125,16 +125,6 @@ public class JFMain extends javax.swing.JFrame {
 
         jMenu1.add(jMenu13);
 
-        jMenu9.setText("Usuarios");
-
-        jMenuItem17.setText("Agregar");
-        jMenu9.add(jMenuItem17);
-
-        jMenuItem18.setText("Catalogo");
-        jMenu9.add(jMenuItem18);
-
-        jMenu1.add(jMenu9);
-
         jMenuItem1.setText("Salir");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +158,11 @@ public class JFMain extends javax.swing.JFrame {
         jMenu7.add(jMenuItem6);
 
         jMenuItem7.setText("Consulta");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem7);
 
         jMenu2.add(jMenu7);
@@ -181,6 +176,16 @@ public class JFMain extends javax.swing.JFrame {
         jMenu8.add(jMenuItem16);
 
         jMenu2.add(jMenu8);
+
+        jMenu9.setText("Usuarios");
+
+        jMenuItem17.setText("Agregar");
+        jMenu9.add(jMenuItem17);
+
+        jMenuItem18.setText("Catalogo");
+        jMenu9.add(jMenuItem18);
+
+        jMenu2.add(jMenu9);
 
         jMenuBar1.add(jMenu2);
 
@@ -279,6 +284,11 @@ public class JFMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem4KeyPressed
 
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        createInternalFrame(JFrmCreator.getFrmConsDestino());
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -319,7 +329,7 @@ public class JFMain extends javax.swing.JFrame {
             if(!JDPMain.isAncestorOf(jif)){
                 JDPMain.add(jif);                
             } else {                
-                jif.setSelected(true);
+                //jif.setSelected(true);
                 jif.setVisible(true);
             }            
         }catch(Exception e){

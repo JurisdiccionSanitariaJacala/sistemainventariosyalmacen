@@ -15,6 +15,7 @@ public class JFrmCreator {
     private static JFrmAcercaDe _frmAcercaDe;
     private static JFrmAltaClave _frmAltaClave;
     private static JFrmAltaDestino _frmAltaDestino;
+    private static JFrmConsDestino _frmConsDestino;
     private static JFrmSalidaAlmacen _frmSalidaAlmacen;
     private static JFrmDespachoAlmacen _frmDespachoAlmacen;
     private static JFrmContacto _frmContacto;
@@ -49,4 +50,12 @@ public class JFrmCreator {
         }
         return _frmAltaClave;
     }
+    
+    public static JFrmConsDestino getFrmConsDestino(){
+        if(_frmConsDestino == null){
+            _frmConsDestino = new JFrmConsDestino();
+        }
+        return _frmConsDestino;
+    }
+    
 }
