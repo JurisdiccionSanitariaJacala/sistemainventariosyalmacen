@@ -263,12 +263,13 @@ public class JFMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+        //// TODO add your handling code here:
         createInternalFrame(JFrmCreator.getFrmAcercaDe());
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
+        //createInternalFrame(JFrmCreator.getFrmSalidaAlmacen());
         createInternalFrame(JFrmCreator.getFrmSalidaAlmacen());
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
@@ -328,10 +329,14 @@ public class JFMain extends javax.swing.JFrame {
         try{
             if(!JDPMain.isAncestorOf(jif)){
                 JDPMain.add(jif);                
-            } else {                
-                //jif.setSelected(true);
+                //jif.setVisible(true);                
+                //jif.toFront();
+            } else {                                
                 jif.setVisible(true);
-            }            
+                JDPMain.setSelectedFrame(jif);
+                //jif.setClosed(false);
+                //jif.setVisible(true);                                
+            }
         }catch(Exception e){
             JOptionPane.showMessageDialog(this, "Error: "+e.getMessage());
         }        

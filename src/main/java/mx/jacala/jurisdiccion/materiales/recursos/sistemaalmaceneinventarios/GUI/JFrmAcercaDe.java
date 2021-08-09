@@ -54,6 +54,8 @@ public class JFrmAcercaDe extends javax.swing.JInternalFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalles del sistema"));
 
+        jTextField1.setEditable(false);
+
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jLabel2.setText("Version:");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);

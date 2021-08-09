@@ -12,6 +12,7 @@ import mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.GUI
  * @author INVENTARIOS
  */
 public class JFrmCreator {
+    
     private static JFrmAcercaDe _frmAcercaDe;
     private static JFrmAltaClave _frmAltaClave;
     private static JFrmAltaDestino _frmAltaDestino;
@@ -53,7 +54,7 @@ public class JFrmCreator {
     
     public static JFrmConsDestino getFrmConsDestino(){
         if(_frmConsDestino == null){
-            _frmConsDestino = new JFrmConsDestino();
+            _frmConsDestino = new JFrmConsDestino();            
         }
         return _frmConsDestino;
     }

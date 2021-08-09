@@ -64,8 +64,8 @@ public class JFrmSalidaAlmacen extends javax.swing.JInternalFrame {
         jLabel11 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jRBFolioAbierto = new javax.swing.JRadioButton();
+        jRBFolioCerrado = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -272,9 +272,19 @@ public class JFrmSalidaAlmacen extends javax.swing.JInternalFrame {
 
         jButton4.setText("Guardar");
 
-        jRadioButton1.setText("Abierto");
+        jRBFolioAbierto.setText("Abierto");
+        jRBFolioAbierto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRBFolioAbiertoActionPerformed(evt);
+            }
+        });
 
-        jRadioButton2.setText("Cerrado");
+        jRBFolioCerrado.setText("Cerrado");
+        jRBFolioCerrado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRBFolioCerradoActionPerformed(evt);
+            }
+        });
 
         jLabel13.setText("Tipo de folio:");
 
@@ -295,9 +305,9 @@ public class JFrmSalidaAlmacen extends javax.swing.JInternalFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel13)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jRadioButton1)
+                            .addComponent(jRBFolioAbierto)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jRadioButton2)
+                            .addComponent(jRBFolioCerrado)
                             .addGap(59, 59, 59)
                             .addComponent(jButton1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -324,8 +334,8 @@ public class JFrmSalidaAlmacen extends javax.swing.JInternalFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel11)
-                        .addComponent(jRadioButton1)
-                        .addComponent(jRadioButton2)
+                        .addComponent(jRBFolioAbierto)
+                        .addComponent(jRBFolioCerrado)
                         .addComponent(jLabel13)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -384,6 +394,20 @@ public class JFrmSalidaAlmacen extends javax.swing.JInternalFrame {
         //TODO: Validacion para agregar / actualizar cantidad si el insumo ya se encuentra en la lista (considerar LOTE y CLAVE)
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jRBFolioAbiertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBFolioAbiertoActionPerformed
+        // TODO add your handling code here:
+        if(jRBFolioAbierto.isSelected()){
+            jRBFolioCerrado.setSelected(false);
+        }
+    }//GEN-LAST:event_jRBFolioAbiertoActionPerformed
+
+    private void jRBFolioCerradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBFolioCerradoActionPerformed
+        // TODO add your handling code here:
+        if(jRBFolioCerrado.isSelected()){
+            jRBFolioAbierto.setSelected(false);
+        }
+    }//GEN-LAST:event_jRBFolioCerradoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -409,8 +433,8 @@ public class JFrmSalidaAlmacen extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRBFolioAbierto;
+    private javax.swing.JRadioButton jRBFolioCerrado;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
