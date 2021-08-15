@@ -325,17 +325,14 @@ public class JFMain extends javax.swing.JFrame {
         });
     }
     
+    //TODO: REVISAR PATRON SINGLETON Y APLICARLO
     public void createInternalFrame(JInternalFrame jif){
         try{
             if(!JDPMain.isAncestorOf(jif)){
-                JDPMain.add(jif);                
-                //jif.setVisible(true);                
-                //jif.toFront();
-            } else {                                
+                JDPMain.add(jif); 
+            } else {
                 jif.setVisible(true);
                 JDPMain.setSelectedFrame(jif);
-                //jif.setClosed(false);
-                //jif.setVisible(true);                                
             }
         }catch(Exception e){
             JOptionPane.showMessageDialog(this, "Error: "+e.getMessage());

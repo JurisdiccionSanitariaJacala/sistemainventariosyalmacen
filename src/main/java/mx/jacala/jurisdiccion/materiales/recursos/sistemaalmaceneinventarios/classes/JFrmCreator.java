@@ -5,13 +5,14 @@
  */
 package mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.classes;
 import javax.swing.JDesktopPane;
+import javax.swing.JInternalFrame;
 import mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.GUI.*;
 
 /**
  *
  * @author INVENTARIOS
  */
-public class JFrmCreator {
+public class JFrmCreator extends JInternalFrame{
     
     private static JFrmAcercaDe _frmAcercaDe;
     private static JFrmAltaClave _frmAltaClave;
@@ -24,6 +25,14 @@ public class JFrmCreator {
     /*
     Metodos para los JFrame
     */
+    
+    public static JFrmDespachoAlmacen getFrmDespachoAlmacen(){
+        if(_frmDespachoAlmacen.isShowing()){
+            _frmDespachoAlmacen = new JFrmDespachoAlmacen();
+        }
+        return _frmDespachoAlmacen;
+    }
+    
     public static JFrmAcercaDe getFrmAcercaDe(){
         if (_frmAcercaDe == null){
             _frmAcercaDe = new JFrmAcercaDe();
