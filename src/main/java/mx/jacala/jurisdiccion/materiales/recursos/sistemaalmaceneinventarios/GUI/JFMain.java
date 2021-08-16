@@ -264,7 +264,9 @@ public class JFMain extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         //// TODO add your handling code here:
-        createInternalFrame(JFrmCreator.getFrmAcercaDe());
+        JFrmAcercaDe frmAcercaDe = JFrmCreator.getFrmAcercaDe();
+        //createInternalFrame(JFrmCreator.getFrmAcercaDe());
+        createInternalFrame(frmAcercaDe);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed

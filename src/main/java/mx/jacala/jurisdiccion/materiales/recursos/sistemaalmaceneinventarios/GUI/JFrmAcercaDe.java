@@ -43,7 +43,6 @@ public class JFrmAcercaDe extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
 
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         setIconifiable(true);
         setTitle("ACERCA DE");
         setVisible(true);

@@ -12,7 +12,8 @@ import mx.jacala.jurisdiccion.materiales.recursos.sistemaalmaceneinventarios.GUI
  *
  * @author INVENTARIOS
  */
-public class JFrmCreator extends JInternalFrame{
+public class JFrmCreator {
+    private JFrmCreator(){}
     
     private static JFrmAcercaDe _frmAcercaDe;
     private static JFrmAltaClave _frmAltaClave;
@@ -26,8 +27,15 @@ public class JFrmCreator extends JInternalFrame{
     Metodos para los JFrame
     */
     
+    public static JFrmAltaDestino getFrmAltaDestino(){
+        if(_frmAltaDestino == null){
+            _frmAltaDestino = new JFrmAltaDestino();
+        }
+        return _frmAltaDestino;
+    }
+    
     public static JFrmDespachoAlmacen getFrmDespachoAlmacen(){
-        if(_frmDespachoAlmacen.isShowing()){
+        if(_frmDespachoAlmacen == null){
             _frmDespachoAlmacen = new JFrmDespachoAlmacen();
         }
         return _frmDespachoAlmacen;
